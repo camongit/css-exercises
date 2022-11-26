@@ -12,6 +12,10 @@ body {
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex; /* apply flex to children of this element */
+  align-items: center; /* center children in the cross axis */
+  padding: 8px; /* keep children 8px off edges */
+  gap: 16px; /* keep 16px between children */
 }
 
 .profile-image {
@@ -45,4 +49,10 @@ a {
 
 ul {
   list-style-type: none;
+  display: flex; /* apply flex to child elements: <li> */
+  gap: 16px; /* creat 16px space between nav links */
+  flex: 1 0 auto; 
+  /* The line above is the secret-sauce that pushes the notifaction and profile image */
+  /* to the right. The effect can be achieved by setting the third value (flex-basis) */
+  /* to auto or 0. */
 }
